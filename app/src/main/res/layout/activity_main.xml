@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity"
+    android:layout_marginTop="30dp"
+    >
+
+    <TextView
+        android:id="@+id/tvMainText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="170dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="15dp"
+        tools:text="@string/MainText"
+        />
+
+    <EditText
+        android:id="@+id/etAddNumber"
+        android:layout_margin="12dp"
+        android:drawablePadding="10dp"
+        android:layout_below="@+id/tvMainText"
+        android:drawableStart="@drawable/vector_editor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="@string/hint_addNumber" />
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/btnCelsius"
+        android:layout_marginStart="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tvResult2"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_below="@+id/tvResult"
+        android:layout_marginStart="10dp"
+        />
+
+    <Button
+        android:id="@+id/btnCelsius"
+        android:layout_below="@id/etAddNumber"
+        android:layout_alignParentStart="true"
+        android:layout_margin="12dp"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:text="@string/button_celsius"
+        />
+
+    <Button
+        android:id="@+id/btnFahrenheit"
+        android:layout_below="@+id/etAddNumber"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="12dp"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:text="@string/button_fahrenheit" />
+
+    <Button
+        android:id="@+id/btnKelvin"
+        android:layout_below="@+id/etAddNumber"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="12dp"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:text="@string/button_kelvin"
+        />
+
+    <TextView
+        android:id="@+id/tvAbout"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_about"
+        />
+
+</RelativeLayout>
