@@ -3,8 +3,7 @@
     <string name="result_celsius">Result celsius</string>
     <string name="result_fahrenheit">Result Fahrenheit</string>
     <string name="result_kelvin">Result Kelvin</string>
-    <string name="MainText">Convertidor de grados.
-    Introduce el total de grados</string>
+    <string name="MainText">Convertidor de temperatura.</string>
     <string name="hint_addNumber">Introduzca un número</string>
     <string name="button_fahrenheit">Fahrenheit</string>
     <string name="button_kelvin">Kelvin</string>

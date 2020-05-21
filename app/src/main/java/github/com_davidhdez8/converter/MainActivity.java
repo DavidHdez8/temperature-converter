@@ -88,5 +88,4 @@ public class MainActivity extends AppCompatActivity {
         double operation = (a*1.8)-459.67;
         return operation;
     }
-
 }

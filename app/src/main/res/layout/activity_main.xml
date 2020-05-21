@@ -4,76 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/colorPrimary"
     tools:context=".MainActivity"
-    android:layout_marginTop="30dp"
     >
-
-    <TextView
-        android:id="@+id/tvMainText"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_width="170dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="15dp"
-        tools:text="@string/MainText"
-        />
 
     <EditText
         android:id="@+id/etAddNumber"
-        android:layout_margin="12dp"
-        android:drawablePadding="10dp"
-        android:layout_below="@+id/tvMainText"
-        android:drawableStart="@drawable/vector_editor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/hint_addNumber" />
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="12dp"
+        android:background="#f1faee"
+        android:drawableStart="@drawable/vector_editor"
+        android:drawablePadding="10dp"
+        android:hint="@string/hint_addNumber"
+        android:inputType="number|numberDecimal" />
 
     <TextView
         android:id="@+id/tvResult"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="30dp"
         android:layout_below="@+id/btnCelsius"
         android:layout_marginStart="10dp"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
         />
 
     <TextView
         android:id="@+id/tvResult2"
-        android:layout_width="250dp"
+        android:layout_width="300dp"
         android:layout_height="30dp"
         android:layout_below="@+id/tvResult"
         android:layout_marginStart="10dp"
+        android:textColor="#ffffff"
+        android:textSize="25dp"
         />
 
     <Button
         android:id="@+id/btnCelsius"
+        android:background="@color/colorSecundary"
         android:layout_below="@id/etAddNumber"
         android:layout_alignParentStart="true"
-        android:layout_margin="12dp"
+        android:layout_margin="15dp"
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:text="@string/button_celsius"
+        android:textColor="#ffffff"
         />
 
     <Button
         android:id="@+id/btnFahrenheit"
+        android:background="@color/colorSecundary"
         android:layout_below="@+id/etAddNumber"
         android:layout_centerHorizontal="true"
-        android:layout_margin="12dp"
+        android:layout_margin="15dp"
         android:layout_width="110dp"
         android:layout_height="50dp"
-        android:text="@string/button_fahrenheit" />
+        android:text="@string/button_fahrenheit"
+        android:textColor="#ffffff"
+        />
 
     <Button
         android:id="@+id/btnKelvin"
+        android:background="@color/colorSecundary"
         android:layout_below="@+id/etAddNumber"
         android:layout_alignParentEnd="true"
-        android:layout_margin="12dp"
+        android:layout_margin="15dp"
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:text="@string/button_kelvin"
+        android:textColor="#ffffff"
         />
 
     <TextView
@@ -83,6 +85,7 @@
         android:layout_width="170dp"
         android:layout_height="wrap_content"
         android:text="@string/txt_about"
+        android:textColor="#ffffff"
         />
 
 </RelativeLayout>
