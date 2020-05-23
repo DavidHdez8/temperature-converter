@@ -9,8 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import java.text.MessageFormat;
-
 public class MainActivity extends AppCompatActivity {
 
     private Button btn_Celsius;
@@ -21,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView tv_Result2;
 
     private EditText et_AddNumber;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,11 +31,10 @@ public class MainActivity extends AppCompatActivity {
         et_AddNumber = findViewById(R.id.etAddNumber);
         btn_Celsius = findViewById(R.id.btnCelsius);
         btn_Celsius.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
             @Override
             public void onClick(View v) {
-                tv_Result.setText(celsiusToFahrenheit(Double.parseDouble(et_AddNumber.getText().toString())) + " Grados Fahrenheit");
-                tv_Result2.setText(celsiusToKelvin(Double.parseDouble(et_AddNumber.getText().toString())) + " Grados Kelvin");
+                tv_Result.setText(String.format("%s Grados Fahrenheit", celsiusToFahrenheit(Float.parseFloat(et_AddNumber.getText().toString()))));
+                tv_Result2.setText(String.format("%s Grados Kelvin", celsiusToKelvin(Float.parseFloat(et_AddNumber.getText().toString()))));
             }
         });
 
@@ -44,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
         btn_Fahrenheit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_Result.setText(fahrenheitToCelsius(Double.parseDouble(et_AddNumber.getText().toString())) + " Grados Celsius");
-                tv_Result2.setText(fahrenheitToKelvin(Double.parseDouble(et_AddNumber.getText().toString())) + " Grados Kelvin");
+                tv_Result.setText(String.format("%s Grados Celsius", fahrenheitToCelsius(Float.parseFloat(et_AddNumber.getText().toString()))));
+                tv_Result2.setText(String.format("%s Grados Kelvin", fahrenheitToKelvin(Float.parseFloat(et_AddNumber.getText().toString()))));
             }
         });
 
@@ -53,39 +51,33 @@ public class MainActivity extends AppCompatActivity {
         btn_Kelvin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                tv_Result.setText(kelvinToCelsius(Double.parseDouble(et_AddNumber.getText().toString())) + " Grados Celsius");
-                tv_Result2.setText(kelvinToFahrenheit(Double.parseDouble(et_AddNumber.getText().toString())) + " Grados Fahrenheit");
+                tv_Result.setText(String.format("%s Grados Celsius", kelvinToCelsius(Float.parseFloat(et_AddNumber.getText().toString()))));
+                tv_Result2.setText(String.format("%s Grados Fahrenheit", kelvinToFahrenheit(Float.parseFloat(et_AddNumber.getText().toString()))));
             }
         });
     }
 
-    public double celsiusToFahrenheit(double a){
-        double operationFahrenheit = (a*1.8)+32;
-        return operationFahrenheit;
+    public float celsiusToFahrenheit(float a){
+        return (float) ((a*1.8)+32);
     }
 
-    public double celsiusToKelvin(double a){
-        double operationKelvin = a + 273.15;
-        return operationKelvin;
+    public float celsiusToKelvin(float a){
+        return (float) (a + 273.15);
     }
 
-    public double fahrenheitToCelsius(double a){
-        double operation = (a*1.8)+32;
-        return operation;
+    public float fahrenheitToCelsius(float a){
+        return (float) ((a*1.8)+32);
     }
 
-    public double fahrenheitToKelvin(double a){
-        double operation = (a-32)/1.8+273;
-        return operation;
+    public float fahrenheitToKelvin(float a){
+        return (float) ((a-32)/1.8+273);
     }
 
-    public double kelvinToCelsius(double a){
-        double operation = a - 273.15;
-        return operation;
+    public float kelvinToCelsius(float a){
+        return (float) (a - 273.15);
     }
 
-    public double kelvinToFahrenheit(double a){
-        double operation = (a*1.8)-459.67;
-        return operation;
+    public float kelvinToFahrenheit(float a){
+        return (float) ((a*1.8)-459.67);
     }
 }
